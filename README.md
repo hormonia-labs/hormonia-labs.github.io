@@ -1,24 +1,34 @@
-# Hormonia — Legal
+# hormonia-labs.github.io
 
-Public legal pages (privacy policy, terms of service, account-deletion
-instructions) for Hormonia's apps, served via GitHub Pages.
+The Hormonia org root site, served via GitHub Pages at
+`https://hormonia-labs.github.io/`. Hosts two things:
+
+1. **`app-ads.txt`** (repo root) — the IAB authorized-sellers file AdMob crawls
+   to verify ad inventory. One file for every Hormonia app (all share one AdMob
+   publisher account). Must stay at the domain **root**.
+2. **`legal/`** — public legal pages (privacy, terms, account-deletion) for
+   every app, linked from store listings.
 
 ## Structure
 ```
-flash/
-  tnpsc/
-    privacy.html
-    terms.html
-    delete-account.html
+app-ads.txt            ← AdMob authorized sellers (domain root — do not move)
+index.html             ← landing page (the domain root)
+legal/
+  flash/
+    tnpsc/ gre/ gmat/   ← privacy.html · terms.html · delete-account.html
+  docscribe/            ← privacy.html · terms.html · delete-account.html
 ```
+
+## Live URLs
+- https://hormonia-labs.github.io/app-ads.txt
+- https://hormonia-labs.github.io/legal/flash/tnpsc/privacy.html
+- https://hormonia-labs.github.io/legal/flash/tnpsc/terms.html
+- https://hormonia-labs.github.io/legal/flash/tnpsc/delete-account.html
 
 ## Adding a new Flash app
 Copy an existing exam folder and edit the app name + data specifics:
 ```
-cp -r flash/tnpsc flash/<exam>
+cp -r legal/flash/tnpsc legal/flash/<exam>
 ```
-
-## Live URLs (after enabling GitHub Pages → Settings → Pages → deploy from main)
-- https://karthik-ak-dev.github.io/hormonia.legal/flash/tnpsc/privacy.html
-- https://karthik-ak-dev.github.io/hormonia.legal/flash/tnpsc/terms.html
-- https://karthik-ak-dev.github.io/hormonia.legal/flash/tnpsc/delete-account.html
+Point the new app's store-listing **Website** field at
+`https://hormonia-labs.github.io` so the shared `app-ads.txt` is crawled for it.

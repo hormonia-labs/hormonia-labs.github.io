@@ -1,0 +1,5 @@
+# Hormonia — app-ads.txt (IAB Tech Lab spec)
+# One file per domain, shared by every Hormonia app whose store listing
+# declares https://hormonia-labs.github.io as its website. All apps run on the
+# same Google AdMob publisher account, so a single DIRECT line authorizes them all.
+google.com, pub-1903832552881792, DIRECT, f08c47fec0942fa0
