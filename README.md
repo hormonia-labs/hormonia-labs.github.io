@@ -17,6 +17,7 @@ legal/
   flash/
     tnpsc/ gre/ gmat/   ← privacy.html · terms.html · delete-account.html
   docscribe/            ← privacy.html · terms.html · delete-account.html
+  logwell/              ← privacy.html · terms.html · delete-account.html
 ```
 
 ## Live URLs
